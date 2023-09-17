@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f0ecdd;
+  font-family: "Inter", sans-serif;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
