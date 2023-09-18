@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/png" href="./img/favicon.ico" />
+    <title>CSS meme Slider</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="slider">
+        <input type="radio" name="radio-btn" id="dot-1" checked />
+        <input type="radio" name="radio-btn" id="dot-2" />
+        <input type="radio" name="radio-btn" id="dot-3" />
+        <input type="radio" name="radio-btn" id="dot-4" />
+        <input type="radio" name="radio-btn" id="dot-5" />
+        <div class="images">
+          <img
+            class="image"
+            src="./img/meme_1.jpg"
+            alt="photo of a sleeping cat"
+          />
+          <img
+            class="image"
+            src="./img/meme_2.jpg"
+            alt="photo of an alerted cat"
+          />
+          <img
+            class="image"
+            src="./img/meme_3.jpg"
+            alt="photo of a surprized cat"
+          />
+          <img
+            class="image"
+            src="./img/meme_4.jpg"
+            alt="photo of a depressed cat"
+          />
+          <img
+            class="image"
+            src="./img/meme_5.jpg"
+            alt="photo of a stoned fox"
+          />
+        </div>
+        <div class="labels">
+          <div class="texts">
+            <p class="text">Procrastinating after Library#3</p>
+            <p class="text">Realizing there are other tasks besides Library</p>
+            <p class="text">Dude, how come "create a slider with no JS"?</p>
+            <p class="text">Preparing to get 0 points for the task</p>
+            <p class="text">The way my "ready" cssMemeSlider looks</p>
+          </div>
+          <div class="controls">
+            <label for="dot-1"><span class="btn" id="btn-1"></span></label>
+            <label for="dot-2"><span class="btn" id="btn-2"></span></label>
+            <label for="dot-3"><span class="btn" id="btn-3"></span></label>
+            <label for="dot-4"><span class="btn" id="btn-4"></span></label>
+            <label for="dot-5"><span class="btn" id="btn-5"></span></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

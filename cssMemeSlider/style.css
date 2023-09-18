@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f0ecdd;
+  font-family: "Inter", sans-serif;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80rem;
+  max-height: 60rem;
+  margin: 0 auto;
+  background-color: #f3e7d4;
+  border: 0.1rem solid #ccc;
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+
+input {
+  display: none;
+}
+
+.images {
+  display: flex;
+  overflow: hidden;
+}
+
+img {
+  object-fit: contain;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  border: 0.1rem solid #ccc;
+  border-radius: 1.5rem;
+  transition: all 0.3s;
+}
+
+.labels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  max-width: 80rem;
+  padding: 2rem;
+}
+
+.texts {
+  width: 73%;
+  display: flex;
+  overflow: hidden;
+  text-align: center;
+}
+
+.text {
+  min-width: 27rem;
+  color: rgba(75, 0, 130, 0.9);
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  justify-content: end;
+}
+
+label {
+  padding: 0.6rem;
+  cursor: pointer;
+  margin: auto 0;
+  border-radius: 50%;
+  border: 0.1rem solid transparent;
+}
+
+.btn {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-color: #ccc;
+  border: 0.1rem solid #4b0082;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: #ddd;
+  border: 0.2rem solid #8a2be2;
+}
+.btn:active {
+  background-color: #999;
+}
+
+/* Control checked */
+#dot-1:checked ~ .labels #btn-1 {
+  background-color: rgba(75, 0, 130, 0.7);
+}
+#dot-2:checked ~ .labels #btn-2 {
+  background-color: rgba(75, 0, 130, 0.7);
+}
+#dot-3:checked ~ .labels #btn-3 {
+  background-color: rgba(75, 0, 130, 0.7);
+}
+#dot-4:checked ~ .labels #btn-4 {
+  background-color: rgba(75, 0, 130, 0.7);
+}
+#dot-5:checked ~ .labels #btn-5 {
+  background-color: rgba(75, 0, 130, 0.7);
+}
+
+/* Image slide */
+#dot-1:checked ~ .images .image {
+  transform: translateX(0%);
+}
+#dot-2:checked ~ .images .image {
+  transform: translateX(-100%);
+}
+#dot-3:checked ~ .images .image {
+  transform: translateX(-200%);
+}
+#dot-4:checked ~ .images .image {
+  transform: translateX(-300%);
+}
+#dot-5:checked ~ .images .image {
+  transform: translateX(-400%);
+}
+
+/* Text slide */
+#dot-1:checked ~ .labels .texts .text {
+  transform: translateX(0%);
+}
+#dot-2:checked ~ .labels .texts .text {
+  transform: translateX(-100%);
+}
+#dot-3:checked ~ .labels .texts .text {
+  transform: translateX(-200%);
+}
+#dot-4:checked ~ .labels .texts .text {
+  transform: translateX(-300%);
+}
+#dot-5:checked ~ .labels .texts .text {
+  transform: translateX(-400%);
+}
+
+/* MEDIA */
+@media (min-width: 768px) and (max-width: 991px) {
+  .text {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .labels {
+    max-width: 76rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  .texts {
+    margin: 0 auto;
+    width: 35%;
+    width: 80vw;
+  }
+  .text {
+    font-size: 1.7rem;
+    text-align: start;
+    min-width: 80vw;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 754px) {
+  .labels {
+    justify-content: start;
+    width: 100%;
+  }
+  .texts {
+    margin: 0;
+    width: 80vw;
+  }
+  .text {
+    text-align: start;
+    min-width: 80vw;
+    font-size: 2rem;
+    width: 90%;
+  }
+}
